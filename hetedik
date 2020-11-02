@@ -1,0 +1,18 @@
+#!/bin/bash
+for ((i=1;i<5;i++)); do
+    echo "Előírt lépésszámú ciklus $i"
+done
+
+i=1
+while [ $i -le 5 ]; do
+    echo "Előltesztelő ciklus $i"
+	i=`expr $i + 1`
+done
+
+for i in $*; do
+    echo $i
+done
+
+for i in `last | cut -f1 -d" " | sort -u`; do
+    echo $i
+done
