@@ -1,0 +1,11 @@
+#!/bin/bash
+echo " A parancs neve: $0"
+echo " Az első paramééter: $1"
+echo " A második paraméter: $2"
+echo " A paraméterek száma: $#"
+if [ $1 -gt $2 ]; then
+    for I in $@ ; do
+    OSSZEG= `expr $OSSZEG + $I`
+    done
+	echo "A paraméterek összege: $Osszeg"
+fi

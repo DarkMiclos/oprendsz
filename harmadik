@@ -1,0 +1,28 @@
+#!/bin/bash
+if test $# -eq 0
+then
+    echo "++++++SÚGÓ++++++++"
+    echo " A $0 parancs használata:"
+    echo "$0 1. paraméter 2.paraméter"
+elif test $# -lt 2
+    then
+	echo "Túl kevés paramétert adtál meg öreg"
+    else
+	if cmp -s $1 $2
+	    then
+		    echo "A két fájl tartalma megegyezik!"
+	    else
+		    if test -r $1
+		        then
+			    echo "A kéét fájé tartalma nem egyezik meg!"
+			else
+			    echo "Az elsőő paraméter nem valós fájl"
+			fi
+			if test -r $2
+			    then
+				echo "A két fájl tartalma nem egyezik meg!"
+			    else
+				echo "A második paraméter nem valós fájl"
+			    fi
+	    fi
+fi

@@ -1,0 +1,9 @@
+#!/bin/bash
+case $1 in
+-d) date;;
+-w) who;;
+-l) ls -latr;;
+*) echo "-d: datum";
+   echo "-w: bejelentkezettek";
+   echo "-l fajl lista"
+esac
